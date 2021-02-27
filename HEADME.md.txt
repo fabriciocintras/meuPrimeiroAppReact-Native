@@ -1,0 +1,48 @@
+///Versionamento Local
+
+git init
+Esse comando inicia o controle de versao da pasta
+
+git status
+Ver como se encontra o estado atual da pasta
+
+git add
+Adiciona ao registro 
+
+git commit -m 'comentario'
+Adiciona as informações dos registros
+
+
+
+///Versionamento Compartilhado
+
+git remote add origin https://...
+Informa qual repositorio o projeto e os registro de commit serao armazenados
+
+git push -u origin Main
+Envia as alteracoes para o repositorio
+
+///Alteracao no doc
+git status
+
+git add
+
+git commit -m ""
+
+git push -u origin Main
+
+///Puchando doc do github para o git 
+git pull origin Main
+Pucha arquivos que nao tem no git do conteudo em nuvem o githubs 
+
+
+
+
+
+
+
+
+
+
+
+
