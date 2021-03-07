@@ -1,34 +1,39 @@
   // Importamos as bibliotecas e componentes principais para nosso projeto
   import React, { Component } from 'react';
-  import { View, Text, Image, ImageBackground } from 'react-native';
+  import { View, Text, Image,ScrollView } from 'react-native';
 
 
   // Criamos a nossa classe App para renderizar nosso projeto
   class App extends Component {
     render() {
-      // Caminho URI da nossa imagem
-      let logoURI = "https://reactjs.org/logo-og.png";
-      // Caminho local da nossa imagem
-      let logoLocal = require('./src/images/reactLogo.png');
+// Caminho URI da nossa imagem 
+let logoURI = "https://reactjs.org/logo-og.png"; 
 
+// Array de imagens
+// Esse array ira inserir a mesma imagem até o loop terminar
+let imagens = []
+for (let i=0; i < 5; i++) {
+  imagens.push(<Image style = {{width:150, height:150, margin: 5}} source = {{uri: logoURI}} /> )
+}
       return (
-        // Area que será utilizada pelo nosso conteúdo
-        <View>
-          <ImageBackground source={logoLocal} style={{width:'100%', height:'100%', alignItems:'center', justifyContent:'center'}} imageStyle={{opacity:0.1,}}>
-          {/* Inserindo textos e estilizando */}
-          <Text style={{fontSize: 20, textTransform: 'uppercase', textAlign: 'center'}}>Olá, Mundo!</Text>
-          <Image 
-            style = {{width:150, height:150}} 
-            source = {logoLocal}
-          />
-          <Text style={{color: '#3fd4eb', fontSize: 16, textAlign: 'center' }}>Esse é o meu primeiro aplicativo!</Text>
-          <Text style={{color: 'lightseagreen', textAlign: 'center'}}>Agora vamos estilizar nosso projeto.</Text>         
+        <ScrollView>
           
-          {/* Inserindo imagem utilizando variavel */}
+        <View>
+          
+            {/* Inserindo textos e estilizando */} 
+            <Text style={{fontSize: 20, textTransform: 'uppercase'}}>Olá, Mundo!</Text> 
+            <Text style={{color: '#3fd4eb', fontSize: 16 }}>Esse é o meu primeiro aplicativo!</Text> 
+            <Text style={{color: 'lightseagreen'}}>Agora vamos estilizar nosso projeto.</Text>  
+            {/*ScrollView com rolagem horizontal*/}
+            <ScrollView horizontal={true}>
+           
+         
 
-
-          </ImageBackground>
-        </View>
+            </ScrollView>
+            {/* Chamada do Array que ira inserir as imagens vezes */}
+           
+        </View> 
+      </ScrollView>
       )
     }
   }
