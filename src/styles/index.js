@@ -1,24 +1,37 @@
-/*   //Para que podemos utilizar o stylesheet, temos que importa lo
-  import{StyleSheet} from 'react-native';
-  // Criamos a variavel fixa 'style'
-  const styles = StyleSheet.create({
-    // Criamos o grupo de estilo e inserimos o subgrupo alinharTexto
-    alinharTexto: {
-      textAlign:"center"
-    }
+import { StyleSheet, Dimensions } from 'react-native'; 
+
+  // Tamanho da largura da tela
+  var width = Dimensions.get('window').width;
+
+  // Estilização do componente Header
+  const header = StyleSheet.create({
+    background: {
+      width: width,
+      height: 80,
+      backgroundColor: "#772ea2"
+    },
+    container: {
+      left: 16
+    },
+    title: {
+      fontSize: 32,
+      color: "white",
+      fontWeight: "bold"
+    },
+    subtitle: {
+      fontSize: 14,
+      color: "white",
+      fontWeight: "500"
+    },
+    logo: {
+      width: 80,
+      height: 80,
+      right: 20,
+      position: "absolute",
+    }  
   });
 
-  const outroStyles = StyleSheet.create({
-    primeiroTexto:{
-      textTransform:"uppercase"
-    },
-    segundoTexto:{
-      color:'#3fd4eb',
-      fontSize:16
-    },
-    terceiroTexto:{
-      color: 'lightseagreen'
-    }
-  })
-
-  export{styles, outroStyles}; */
+  // Para que nosso arquivo possa ser importado, temos que exportar ele 
+  // Utilizamos 'export default grupo1' se quisermos exportar um grupo de estil
+  // Utilizarmos 'export { grupo1, grupo2, grupo3 }' para exportarmos mais de u
+  export default header;
