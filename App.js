@@ -8,7 +8,7 @@ class App extends Component {
   render() { 
     return ( 
       <View>  
-        <Header></Header>
+        < Header titulo="React-native" subtitulo="Uma biblioteca java script"></Header>
       </View> 
     ) 
   } 
