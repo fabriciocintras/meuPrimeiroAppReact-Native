@@ -9,6 +9,16 @@ class Form extends Component {
         this.state = {
             nome: "", idade: ""
         };
+        this.concluir = this.concluir.bind(this);
+    }
+    concluir(){
+        if(this.state.nome ===""|| this.state.idade ===""){
+            alert("Por favor, preencha corretamente os campos.");
+            return;
+        }else{
+            alert("Nome: " + this.state.nome + "/n" + "Idade: " + this.state.idade);
+        }
+
     }
 
     render() {
@@ -25,14 +35,10 @@ class Form extends Component {
                 <TextInput placeholder="Informe sua idade" keyboardType="numeric" style={form.inputs} onChangeText = { (idadeDigitada) => this.setState({ idade : idadeDigitada })} /> 
                 <Text></Text>
 
-                <Button title="Pronto!"></Button>
+                <Button title="Pronto!" onPress={this.concluir}></Button>
                 <Text></Text>
                 
-                <View>
-                    {/* Chamamos nossos States para serem exibidos os valores */}
-                    <Text>Nome do usuário: {this.state.nome}</Text>
-                    <Text>Idade do usuário: {this.state.idade} anos</Text>
-                </View>
+              
             </View>
     );
 }
