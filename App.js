@@ -1,18 +1,20 @@
-import React, { Component } from 'react'; 
-import { View, Text } from 'react-native';
-import Header from './src/components/Header'; 
 
-// Criamos a nossa classe App para renderizar nosso projeto 
-class App extends Component { 
+  import React, { Component } from 'react'; 
+  import { View, Text } from 'react-native'; 
+import Form from './src/components/Form';
+  import Header from './src/components/Header'; 
 
-  render() { 
-    return ( 
-      <View>  
-        < Header titulo="React-native" subtitulo="Uma biblioteca java script"></Header>
-      </View> 
-    ) 
+  class App extends Component { 
+
+    render() { 
+      return ( 
+        <View>  
+          <Header titulo="React Native" subtitulo="Uma biblioteca JavaScript."></Header>
+          <Form></Form>
+        </View> 
+      ) 
+    } 
   } 
-} 
-
-// Informamos qual classe será renderizada no aplicativo 
-export default App;
+  export default App;
+              
+            
