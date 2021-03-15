@@ -16,7 +16,7 @@ class Form extends Component {
             alert("Por favor, preencha corretamente os campos.");
             return;
         }else{
-            alert("Nome: " + this.state.nome + "/n" + "Idade: " + this.state.idade);
+            alert("Nome: " + this.state.nome + "\n" + "Idade: " + this.state.idade);
         }
 
     }
